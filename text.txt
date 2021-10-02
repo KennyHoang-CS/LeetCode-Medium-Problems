@@ -1,0 +1,4 @@
+
+what is NaN?
+
+NaN = Not a Number, it means the valuye is not a  legit number. 
