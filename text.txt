@@ -1,4 +1,134 @@
 
-what is NaN?
 
-NaN = Not a Number, it means the valuye is not a  legit number. 
+What is call?
+
+It is a predefined method in javascript. 
+
+This method invokes another a method (a function) by specifying the owner obj. 
+
+call() method allows an object to use another object's method. 
+
+call() method accepts arguements as well. call(objCalled, args...)
+
+
+------
+
+apply() behaves like call() but, the difference is that it take arguements as an array. 
+
+------
+
+What is bind()?
+
+bind() returns a function where the value of THIS will bind to the owner object that 
+is passed as the arguement. 
+
+-----
+
+What is currying in javascript?
+
+Currying is an advanced technique to transform a function of N arguements 
+to less than 1 or less arguements. 
+
+------
+
+Explain Scope and Scope Chain?
+
+3 Scopes: Global, local or function, and block. 
+
+Scopes defined what variables or functions can be accessed. 
+
+Global Scope: variables or functions can be accessed anywhere in the code.
+
+Local/Function Scope: variables or functions that are defined inside a function 
+    can only be accessed within that function and not outside of it. 
+
+Block Scope: variables relating to let and const have block scope. Variables declared with 
+    VAR do not have a block scope. Variables declared within a block scope can only be 
+    accessed within and not outside. Example: for loops. { let x = 2; } 
+
+Scope Chaining: looking for a variable x. Starts with the inner scope, if it cant find 
+    x in the inner scope, then looks for x in the outer scope, if can't find in the outer
+    scope, then it will look for x in the global scope. Otherwise, if not found in the end,
+    then a reference error will be thrown. 
+
+------
+
+What are closures?
+
+Closures is an ability of a function to remember the variables and functions that
+    declared in the outer scope. 
+
+Closures is when you have a function defined inside of another function, so the inner 
+    function will still have access to the variables and functions that are defined in 
+    the outer function after the outer function finished executing.
+
+The ability for a function to store a variable for future reference after execution is 
+    called closure. 
+
+------
+
+What are object prototypes?
+
+All js objects inherits properties from a prototype. 
+
+Example: Array objects inherit properties from the array prototype. 
+        Math objects inherit properties from the math prototype. 
+
+On top of the chain is Object.prototype. Every property inherits properties
+    and methods from the Object.prototype. 
+
+A prototype is a blueprint of an object. Prototypes allows us to use methods and 
+    properties of an object if they do not exist in the current object. 
+
+I.E. arrays
+
+let array = []; 
+array.push(5); 
+console.log(array); // outputs [5]
+
+Javascript will not throw an error because the push method is inherited from the 
+array prototype. Javascript does not see the push method is defined in the current array
+object, so it will look in the current object prototype. If still not found, then it will
+look at the prototype of that prototype. 
+
+------- 
+
+What are callbacks? 
+
+Functions that are passed as arguements to another functions are called
+    callback functions. A callback is a function that will be executed even after 
+    another function is executed. 
+
+--------
+
+What is memoization?
+
+We store the result of a parameter into a object to save time. If the same parameter is 
+encountered again, we simply return it. Otherwise, we cache the result into an object. 
+Even though we save time, it will be costly in terms of memory since we are storing all 
+results. 
+
+---------
+
+Why are constructor functions used? 
+
+Constructor functions are used to create objects in javascript. 
+
+When to use it? When we want multiple obejcts to share similar properties and methods. 
+
+Constructor functions allows us to group similar objects. 
+
+
+-------
+
+What is a DOM?
+
+DOM = Document Object Model. It is a programming interface for HTML and XML documents.
+
+When a browser renders a HTML document, it will create a DOM for that HTML document. 
+Using the DOM, we can change or modify elements on the HTML document. 
+
+
+
+----- Advanced Javascript Concepts ---------
+
