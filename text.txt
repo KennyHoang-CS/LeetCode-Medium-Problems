@@ -132,3 +132,166 @@ Using the DOM, we can change or modify elements on the HTML document.
 
 ----- Advanced Javascript Concepts ---------
 
+What are Arrow functions? 
+
+A short-hand notation to write functions. 
+
+Arrow functions can only be used as a function expression. 
+
+In arrow functions, the use of 'THIS' will not work. 'THIS' will refer to the parent scope, which 
+    will be the window object. 
+
+-------
+
+Differences between declaring variables using var, let and const.
+
+var: variables declared with VAR are added to the window/global object. Hence, they can 
+    be accessed anywhere in the code. In a for-loop, if the incrementer is declared 
+    with VAR then that incrementer would still be accessed outside of the for-loop. 
+
+let: they are only accessed within the scope. Variables declared with LET aren't 
+    added to the window object like VAR. 
+
+const: behaves like LET, but cannot be assigned another value or reference. 
+
+
+-------
+
+What is the rest parameter and spread operator?
+
+Rest and Spread were introduced in ES6.  
+
+function myFunc(...args) {
+    // do something
+}
+
+...parameterName is used to take any N arguements as an array. 
+
+REST OPERATOR should be the last arguement. 
+
+
+Spread is used to spread arrays or objects into individual elements. 
+
+-------
+
+What is the use of promises in javascript?
+
+Promises are used for asynchronous operations in javascript. 
+
+Back then, callbacks were used to handle asynchronous operations which lead to callback hell. 
+
+Promises have 4 states: Pending, Fulfilled, Rejected, Settled.
+
+A promise is created through the Promise constructor using a callback that takes
+    2 parameters: resolve and reject. 
+
+    Resolve is the function that will execute after the asynchronous operation is successful.
+
+    Reject is the function that will execute after the asynchronous operation failed. 
+
+We can process the Promise result with a .then() and .catch(). 
+
+    .then() is used to access the result of the fulfilled promise. 
+
+    .catch() is used to access the result of the failed promise. 
+
+
+--------
+
+What are classes in Javascript?
+
+
+Classes were introduced in ES6. 
+
+Classes provide a new way of declaring constructors in javascript. 
+
+Classes are not hoisted, they cannot be used before it's declared. 
+
+A class can inherit another class properties and methods through EXTEND. 
+
+All syntax inside the class must follow 'strict mode' otherwise error is thrown. 
+
+
+--------
+
+What are generator functions?
+
+Introduced in ES6, they are a special class of functions. 
+
+They can be stopped midway and then continue from where it stopped. 
+
+They are declared with function* myFuncName () { ...  }
+
+The generator function has a method next(), which executes the code until the nearest
+    YIELD statement and returns the YIELD value. 
+
+The next() method returns a object with VALUE and DONE properties. 
+    Value propety represents the yield value.
+    Done property represents whether the function code is finished or not. True if finished. 
+
+Generator functions are used to return iterators. 
+
+    Done property will be true once it reaches the return statement. 
+
+------
+
+
+Explain WeakSet in javascript.
+
+
+In javascript, a set is a unique connection of elements and is ordered. 
+
+WeakSet is similar to a Set but with some differences. 
+    - WeakSet only contains objects, and nothing else. 
+    - An object inside the weakset is referenced weakly. 
+        Meaning if the object inside the weakset does not have a reference,
+            it will be thrown to the garbage collection. 
+    - Unlike Set, WeakSet has only 3 methods: add, delete, has. 
+
+
+--------
+
+Explain WeakMap in javascript. 
+
+In javascript, Maps are used to store key-value pairs that can either be primitive or non-primitive types. 
+
+WeakMap is similar to Map with some differences. 
+    - Key value pairs are always object.  
+    - If there are no references to the object, then it will be garbarge collected. 
+
+---------
+
+What is Object Destructuring? 
+
+Introducted in ES6, object Destructuring is a new way to obtain elements from 
+    an array or object. 
+
+
+------------
+
+What is a Temporal Dead Zone? 
+
+Temporal Dead Zone is a behavior occurs for variables that are declared with CONST and LET. 
+
+It's a behavior when variables are accessed before they are initialized. 
+
+------------
+
+SIDE NOTES
+
+a + b 
+
+if a or b is a string in a + operator. If a or b is a n integer 
+it will be turned into a string, so both wil lbe strings
+then + will concat the two strings 
+
+
+a - b 
+
+if a or b is a string, and a '-' operation occurs. a or b will be converted
+into integer then subtraction between two integers will occur. 
+
+
+'THIS' inside arrow functions or immediately invoked functions will always refer
+    to the global/window object. 
+
